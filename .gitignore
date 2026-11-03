@@ -1,0 +1,9 @@
+# Path budget: dependency/cache/build-tool scratch at any depth only.
+# dist/ and all game source, runtime assets and lockfiles remain included.
+**/node_modules/
+**/.npm/
+**/.vite/
+**/.cache/
+**/coverage/
+**/*.tsbuildinfo
+/test/scratch/
