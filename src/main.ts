@@ -64,6 +64,22 @@ const t = () => copy[save.language];
 const zh = () => save.language === "zh";
 const live = new LiveStatus((next) => {
   signal = next;
+  // A run that began in offline practice and is still untouched adopts the
+  // first valid reading as its snapshot; nothing has been played that could break.
+  if (
+    next.state === "online" &&
+    !rule.online &&
+    game.moves === 0 &&
+    game.history.length === 0 &&
+    !running &&
+    !game.won
+  ) {
+    rule = { mode: next.mode, online: true, checkedAt: next.checkedAt };
+    game = newGame(game.level, rule.mode);
+    travelEnergy = game.level.energy;
+    render();
+    return;
+  }
   updateLive();
 });
 function persist() {
@@ -240,7 +256,7 @@ function render() {
     <div class="feedback ${feedbackKind}" id="feedback" ${!feedback ? "hidden" : ""}>${feedback}</div>
     ${game.won && journey ? `<div class="win-panel" role="region" aria-label="${c.success}"><div class="win-hamster">${hamster()}</div><div><h3>${l.id === 12 ? c.finished : c.success}</h3><p>${l.id === 12 ? c.finishLine : c.successLine}</p>${starsHTML(stars(game, journey))}<p class="journey-summary">${journey.path.length - 1} ${c.routeLength} · ${journey.energy} ${c.remaining}</p></div><button type="button" id="next" class="primary-button">${l.id < 12 ? c.next : c.replay}${icon("arrow")}</button></div>` : ""}
   </section>
-  <aside class="field-notes"><section class="lesson-section"><div class="notebook-mark" aria-hidden="true">${icon("help")}</div><h3>${c.help}</h3><p class="lesson-text">${l.lesson[zh() ? 1 : 0]}</p><div class="star-goals"><p>${icon("star")}${c.star1}</p><p>${icon("star")}${c.star2} ${l.par} ${!zh() && l.par === 1 ? "rotation" : c.star2end}</p><p>${icon("star")}${c.star3}</p></div><button type="button" id="hint" class="text-button">${icon("help")}${c.hint}</button><p class="hint-copy" ${!hint ? "hidden" : ""}>${hint}</p></section>
+  <aside class="field-notes"><section class="lesson-section"><h3>${c.help}</h3><p class="lesson-text">${l.lesson[zh() ? 1 : 0]}</p><div class="star-goals"><p>${icon("star")}${c.star1}</p><p>${icon("star")}${c.star2} ${l.par} ${!zh() && l.par === 1 ? "rotation" : c.star2end}</p><p>${icon("star")}${c.star3}</p></div><button type="button" id="hint" class="text-button">${icon("help")}${c.hint}</button><p class="hint-copy" ${!hint ? "hidden" : ""}>${hint}</p></section>
     <section class="live-section"><h3>${c.ruleLabel}</h3><div id="run-rule" class="run-rule">${ruleHTML()}</div><label class="bonus-toggle"><input id="bonus" type="checkbox" ${includeBonus ? "checked" : ""} ${running || game.won ? "disabled" : ""}/><span>${c.optional}<small>${c.optionalHint}</small></span></label><p class="live-explanation">${c.liveHint}</p><p class="freshness" id="freshness"></p><div class="live-actions"><a href="${STATUS_URL}" target="_blank" rel="noopener noreferrer">${c.source}${icon("arrow")}</a><button type="button" id="retry" class="text-button" ${signal.state === "online" ? "hidden" : ""}>${c.retry}</button></div><div id="new-live-rule"></div></section>
   </aside></div>
   <section class="burrow-trail" aria-label="${c.levels}"><div class="trail-title"><h3>${zh() ? "地洞之旅" : "The burrow trail"}</h3><span>${save.stars.filter((n) => n > 0).length} / 12</span></div><div class="trail-levels">${levels.map((level, i) => `<button type="button" id="trail-${i}" data-level="${i}" class="trail-stop ${level.id === l.id ? "active" : ""} ${save.stars[i] ? "complete" : ""}" ${i > 0 && !save.stars[i - 1] ? "disabled" : ""} aria-label="${c.level} ${i + 1}: ${level.name[zh() ? 1 : 0]}${i > 0 && !save.stars[i - 1] ? `. ${c.locked}` : ""}" ${level.id === l.id ? 'aria-current="step"' : ""}><span>${i + 1}</span>${save.stars[i] ? icon("check") : i > 0 && !save.stars[i - 1] ? icon("lock") : '<span class="trail-dot"></span>'}</button>`).join("")}</div></section>

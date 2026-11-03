@@ -744,22 +744,6 @@ main {
   border-radius: 3px 3px 14px 3px;
   position: relative;
 }
-.notebook-mark {
-  position: absolute;
-  inset-block-start: -15px;
-  inset-inline-end: 24px;
-  width: 28px;
-  height: 36px;
-  border-radius: 3px;
-  background: var(--teal-600);
-  display: grid;
-  place-items: center;
-  color: var(--cream-50);
-}
-.notebook-mark .icon {
-  width: 18px;
-  height: 18px;
-}
 .lesson-text {
   margin-block-start: 12px;
   line-height: 1.6;

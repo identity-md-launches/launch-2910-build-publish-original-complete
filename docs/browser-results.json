@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-03T07:04:57.474Z",
+  "results": [
+    {
+      "name": "Chromium: relative assets, mobile first screen and no runtime errors",
+      "passed": true
+    },
+    {
+      "name": "Chromium: touch rotate, undo and tutorial win",
+      "passed": true
+    },
+    {
+      "name": "Chromium: keyboard rotate, undo, reset, error, win, focus and persistence",
+      "passed": true
+    },
+    {
+      "name": "Chromium: all 12 reference bonus wins and progression with IDLE",
+      "passed": true
+    },
+    {
+      "name": "Chromium: all 12 reference bonus wins and progression with ACTIVE",
+      "passed": true
+    },
+    {
+      "name": "Chromium: live change stays frozen and a new run adopts spinning",
+      "passed": true
+    },
+    {
+      "name": "Chromium: API timeout, offline play and timed recovery",
+      "passed": true
+    },
+    {
+      "name": "Chromium: Chinese UI, reduced motion, text enlargement and accessibility",
+      "passed": true
+    },
+    {
+      "name": "Chromium: corrupt and unavailable storage stay playable",
+      "passed": true
+    }
+  ],
+  "passed": 9,
+  "failed": 0,
+  "limitations": [
+    "WebKit could not launch on this host (browser executable or OS dependencies unavailable)"
+  ]
+}

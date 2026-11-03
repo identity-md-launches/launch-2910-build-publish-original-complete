@@ -16,7 +16,7 @@ ENV = {'PATH': os.defpath, 'LANG': 'C.UTF-8', 'GIT_CONFIG_NOSYSTEM': '1', 'GIT_C
 # Include only assignment outputs. Never scan machine/configuration/input directories.
 FILES = ['.gitignore', 'index.html', 'package.json', 'package-lock.json',
          'tsconfig.json', 'vite.config.ts', 'README.md', 'DESIGN.md', 'LICENSE']
-DIRS = ['src', 'scripts', 'test', 'public', 'dist', 'artifacts']
+DIRS = ['src', 'scripts', 'test', 'public', 'dist', 'docs']
 EXCLUDED = {'node_modules', '.npm', '.cache', '.vite', '.git', 'source-repository',
             'scratch', '__pycache__', '.playwright-mcp'}
 

@@ -25,7 +25,7 @@ The existing hexadecimal notation is canonical. Semantic tokens reference the cr
 
 Art has separate literal SVG colors: hamster brown `#c7884e`, cheeks `#edb5a0`, face `#fff3d9`; seed fill `#e6ae3c` and outline `#79511e`. Tunnel walls use `#487b6a` when unconnected and the accent when reachable; floors change from `#8caf96` to `#a6c7a7`. These communicate board geometry, not additional peer actions. Reward, switch, gate, home, live and offline states also have distinct shapes and text labels.
 
-Rendered measurements are in `artifacts/design-metrics.json`: main text/page **9.73:1**, primary action **8.21:1**, muted goal/page **5.61:1**, notebook body **10.79:1**, hint link/notebook **8.21:1**. These are measured solid pairs, not an assertion about every pixel of illustration, disabled opacity, or every forced-colors state. The pinned probe also passed its rendered text contrast checks.
+Rendered contrast measurements recorded in the previous review round: main text/page **9.73:1**, primary action **8.21:1**, muted goal/page **5.61:1**, notebook body **10.79:1**, hint link/notebook **8.21:1**. These are measured solid pairs, not an assertion about every pixel of illustration, disabled opacity, or every forced-colors state. The pinned probe's rendered text contrast check passed again in this revision (see `docs/validation.md`).
 
 ## Typography
 
@@ -85,4 +85,4 @@ A visible 3px `:focus-visible` outline, 44px utility targets and 48px main actio
 
 Use the existing cream paper/soil separation and the single teal primary action. Reuse `icon()` and original SVG patterns rather than adding another icon language. Keep instructions near the board and the playable first level on entry. Extend both entries in `copy` for new UI, and provide the Chinese font glyphs. Avoid adding live-looking sample values, a hero above the game, decorative dashboard cards, additional font families, text clipping, an endless wheel animation, or remote asset dependencies.
 
-For a new game view, start from `render()`'s main/notes structure, reuse the existing controls and dialog, keep local progression in the versioned storage adapter, and validate its 390px first screen, keyboard path, 320px reflow and Chinese labels. Review evidence and remaining limitations belong in `artifacts/validation.md`, not in the player flow.
+For a new game view, start from `render()`'s main/notes structure, reuse the existing controls and dialog, keep local progression in the versioned storage adapter, and validate its 390px first screen, keyboard path, 320px reflow and Chinese labels. Review evidence and remaining limitations belong in `docs/validation.md`, not in the player flow.

@@ -1,0 +1,2348 @@
+[
+  {
+    "level": 1,
+    "title": "A seed of an idea",
+    "size": 4,
+    "par": 1,
+    "maxMoves": 5,
+    "energy": 8,
+    "rotations": [
+      {
+        "id": 9,
+        "row": 3,
+        "column": 2,
+        "clockwise": 1
+      }
+    ],
+    "routes": {
+      "idle": {
+        "core": {
+          "steps": 4,
+          "energyRemaining": 4,
+          "path": [
+            "3,1",
+            "3,2",
+            "3,3",
+            "3,2",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "bonus": {
+          "steps": 10,
+          "energyRemaining": 2,
+          "path": [
+            "3,1",
+            "3,2",
+            "2,2",
+            "3,2",
+            "3,3",
+            "3,4",
+            "2,4",
+            "3,4",
+            "3,3",
+            "3,2",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "spinning": {
+        "core": {
+          "steps": 4,
+          "energyRemaining": 4,
+          "path": [
+            "3,1",
+            "3,2",
+            "3,3",
+            "3,2",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "bonus": {
+          "steps": 10,
+          "energyRemaining": 1,
+          "path": [
+            "3,1",
+            "3,2",
+            "3,3",
+            "3,4",
+            "2,4",
+            "2,3",
+            "2,4",
+            "3,4",
+            "3,3",
+            "3,2",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    }
+  },
+  {
+    "level": 2,
+    "title": "Around the root",
+    "size": 4,
+    "par": 4,
+    "maxMoves": 8,
+    "energy": 12,
+    "rotations": [
+      {
+        "id": 8,
+        "row": 3,
+        "column": 1,
+        "clockwise": 1
+      },
+      {
+        "id": 5,
+        "row": 2,
+        "column": 2,
+        "clockwise": 2
+      },
+      {
+        "id": 10,
+        "row": 3,
+        "column": 3,
+        "clockwise": 1
+      }
+    ],
+    "routes": {
+      "idle": {
+        "core": {
+          "steps": 8,
+          "energyRemaining": 4,
+          "path": [
+            "4,1",
+            "3,1",
+            "3,2",
+            "2,2",
+            "2,3",
+            "2,2",
+            "3,2",
+            "3,1",
+            "4,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "bonus": {
+          "steps": 12,
+          "energyRemaining": 4,
+          "path": [
+            "4,1",
+            "3,1",
+            "3,2",
+            "2,2",
+            "2,3",
+            "2,4",
+            "2,3",
+            "2,2",
+            "3,2",
+            "3,3",
+            "3,2",
+            "3,1",
+            "4,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "spinning": {
+        "core": {
+          "steps": 8,
+          "energyRemaining": 4,
+          "path": [
+            "4,1",
+            "3,1",
+            "3,2",
+            "2,2",
+            "2,3",
+            "2,2",
+            "3,2",
+            "3,1",
+            "4,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "bonus": {
+          "steps": 12,
+          "energyRemaining": 3,
+          "path": [
+            "4,1",
+            "3,1",
+            "3,2",
+            "2,2",
+            "2,3",
+            "2,4",
+            "3,4",
+            "2,4",
+            "2,3",
+            "2,2",
+            "3,2",
+            "3,1",
+            "4,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    }
+  },
+  {
+    "level": 3,
+    "title": "The fork in the burrow",
+    "size": 5,
+    "par": 7,
+    "maxMoves": 12,
+    "energy": 16,
+    "rotations": [
+      {
+        "id": 11,
+        "row": 3,
+        "column": 2,
+        "clockwise": 1
+      },
+      {
+        "id": 12,
+        "row": 3,
+        "column": 3,
+        "clockwise": 2
+      },
+      {
+        "id": 13,
+        "row": 3,
+        "column": 4,
+        "clockwise": 3
+      },
+      {
+        "id": 7,
+        "row": 2,
+        "column": 3,
+        "clockwise": 1
+      }
+    ],
+    "routes": {
+      "idle": {
+        "core": {
+          "steps": 10,
+          "energyRemaining": 6,
+          "path": [
+            "3,1",
+            "3,2",
+            "3,3",
+            "2,3",
+            "3,3",
+            "3,4",
+            "3,5",
+            "3,4",
+            "3,3",
+            "3,2",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "bonus": {
+          "steps": 14,
+          "energyRemaining": 6,
+          "path": [
+            "3,1",
+            "3,2",
+            "3,3",
+            "2,3",
+            "3,3",
+            "3,4",
+            "3,5",
+            "3,4",
+            "4,4",
+            "3,4",
+            "3,3",
+            "3,2",
+            "4,2",
+            "3,2",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "spinning": {
+        "core": {
+          "steps": 10,
+          "energyRemaining": 6,
+          "path": [
+            "3,1",
+            "3,2",
+            "3,3",
+            "2,3",
+            "3,3",
+            "3,4",
+            "3,5",
+            "3,4",
+            "3,3",
+            "3,2",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "bonus": {
+          "steps": 14,
+          "energyRemaining": 5,
+          "path": [
+            "3,1",
+            "3,2",
+            "3,3",
+            "2,3",
+            "3,3",
+            "3,4",
+            "3,5",
+            "3,4",
+            "4,4",
+            "4,3",
+            "4,4",
+            "3,4",
+            "3,3",
+            "3,2",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    }
+  },
+  {
+    "level": 4,
+    "title": "The long way home",
+    "size": 5,
+    "par": 9,
+    "maxMoves": 14,
+    "energy": 16,
+    "rotations": [
+      {
+        "id": 11,
+        "row": 3,
+        "column": 2,
+        "clockwise": 2
+      },
+      {
+        "id": 6,
+        "row": 2,
+        "column": 2,
+        "clockwise": 1
+      },
+      {
+        "id": 13,
+        "row": 3,
+        "column": 4,
+        "clockwise": 3
+      },
+      {
+        "id": 17,
+        "row": 4,
+        "column": 3,
+        "clockwise": 1
+      },
+      {
+        "id": 15,
+        "row": 4,
+        "column": 1,
+        "clockwise": 2
+      }
+    ],
+    "routes": {
+      "idle": {
+        "core": {
+          "steps": 10,
+          "energyRemaining": 6,
+          "path": [
+            "3,1",
+            "3,2",
+            "2,2",
+            "2,3",
+            "2,4",
+            "3,4",
+            "3,3",
+            "4,3",
+            "4,2",
+            "4,1",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "bonus": {
+          "steps": 12,
+          "energyRemaining": 8,
+          "path": [
+            "3,1",
+            "3,2",
+            "2,2",
+            "2,3",
+            "2,4",
+            "3,4",
+            "3,5",
+            "4,5",
+            "4,4",
+            "4,3",
+            "4,2",
+            "4,1",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "spinning": {
+        "core": {
+          "steps": 10,
+          "energyRemaining": 6,
+          "path": [
+            "3,1",
+            "3,2",
+            "2,2",
+            "2,3",
+            "2,4",
+            "3,4",
+            "3,3",
+            "4,3",
+            "4,2",
+            "4,1",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "bonus": {
+          "steps": 12,
+          "energyRemaining": 7,
+          "path": [
+            "3,1",
+            "3,2",
+            "2,2",
+            "2,3",
+            "2,4",
+            "3,4",
+            "3,5",
+            "4,5",
+            "4,4",
+            "4,3",
+            "4,2",
+            "4,1",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    }
+  },
+  {
+    "level": 5,
+    "title": "One-way whiskers",
+    "size": 5,
+    "par": 8,
+    "maxMoves": 13,
+    "energy": 16,
+    "rotations": [
+      {
+        "id": 5,
+        "row": 2,
+        "column": 1,
+        "clockwise": 1
+      },
+      {
+        "id": 7,
+        "row": 2,
+        "column": 3,
+        "clockwise": 2
+      },
+      {
+        "id": 13,
+        "row": 3,
+        "column": 4,
+        "clockwise": 1
+      },
+      {
+        "id": 17,
+        "row": 4,
+        "column": 3,
+        "clockwise": 3
+      },
+      {
+        "id": 19,
+        "row": 4,
+        "column": 5,
+        "clockwise": 1
+      }
+    ],
+    "routes": {
+      "idle": {
+        "core": {
+          "steps": 10,
+          "energyRemaining": 6,
+          "path": [
+            "3,1",
+            "2,1",
+            "2,2",
+            "2,3",
+            "2,4",
+            "3,4",
+            "4,4",
+            "4,3",
+            "4,2",
+            "4,1",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "bonus": {
+          "steps": 14,
+          "energyRemaining": 6,
+          "path": [
+            "3,1",
+            "2,1",
+            "2,2",
+            "2,3",
+            "2,4",
+            "3,4",
+            "3,5",
+            "4,5",
+            "5,5",
+            "5,4",
+            "4,4",
+            "4,3",
+            "4,2",
+            "4,1",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "spinning": {
+        "core": {
+          "steps": 10,
+          "energyRemaining": 6,
+          "path": [
+            "3,1",
+            "2,1",
+            "2,2",
+            "2,3",
+            "2,4",
+            "3,4",
+            "4,4",
+            "4,3",
+            "4,2",
+            "4,1",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "bonus": {
+          "steps": 14,
+          "energyRemaining": 5,
+          "path": [
+            "3,1",
+            "2,1",
+            "2,2",
+            "2,3",
+            "2,4",
+            "3,4",
+            "3,5",
+            "4,5",
+            "3,5",
+            "3,4",
+            "4,4",
+            "4,3",
+            "4,2",
+            "4,1",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    }
+  },
+  {
+    "level": 6,
+    "title": "Two little errands",
+    "size": 5,
+    "par": 10,
+    "maxMoves": 15,
+    "energy": 20,
+    "rotations": [
+      {
+        "id": 0,
+        "row": 1,
+        "column": 1,
+        "clockwise": 2
+      },
+      {
+        "id": 1,
+        "row": 1,
+        "column": 2,
+        "clockwise": 1
+      },
+      {
+        "id": 8,
+        "row": 2,
+        "column": 4,
+        "clockwise": 1
+      },
+      {
+        "id": 12,
+        "row": 3,
+        "column": 3,
+        "clockwise": 3
+      },
+      {
+        "id": 17,
+        "row": 4,
+        "column": 3,
+        "clockwise": 2
+      },
+      {
+        "id": 11,
+        "row": 3,
+        "column": 2,
+        "clockwise": 1
+      }
+    ],
+    "routes": {
+      "idle": {
+        "core": {
+          "steps": 14,
+          "energyRemaining": 6,
+          "path": [
+            "3,1",
+            "2,1",
+            "1,1",
+            "1,2",
+            "1,3",
+            "1,4",
+            "2,4",
+            "3,4",
+            "3,3",
+            "4,3",
+            "5,3",
+            "4,3",
+            "3,3",
+            "3,2",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "bonus": {
+          "steps": 16,
+          "energyRemaining": 8,
+          "path": [
+            "3,1",
+            "2,1",
+            "1,1",
+            "1,2",
+            "1,3",
+            "1,4",
+            "2,4",
+            "2,5",
+            "3,5",
+            "4,5",
+            "4,4",
+            "4,3",
+            "5,3",
+            "4,3",
+            "3,3",
+            "3,2",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      },
+      "spinning": {
+        "core": {
+          "steps": 14,
+          "energyRemaining": 6,
+          "path": [
+            "3,1",
+            "2,1",
+            "1,1",
+            "1,2",
+            "1,3",
+            "1,4",
+            "2,4",
+            "3,4",
+            "3,3",
+            "4,3",
+            "5,3",
+            "4,3",
+            "3,3",
+            "3,2",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "bonus": {
+          "steps": 16,
+          "energyRemaining": 7,
+          "path": [
+            "3,1",
+            "2,1",
+            "1,1",
+            "1,2",
+            "1,3",
+            "1,4",
+            "2,4",
+            "2,5",
+            "3,5",
+            "4,5",
+            "4,4",
+            "4,3",
+            "5,3",
+            "4,3",
+            "3,3",
+            "3,2",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    }
+  },
+  {
+    "level": 7,
+    "title": "A switch in the soil",
+    "size": 5,
+    "par": 10,
+    "maxMoves": 15,
+    "energy": 16,
+    "rotations": [
+      {
+        "id": 5,
+        "row": 2,
+        "column": 1,
+        "clockwise": 1
+      },
+      {
+        "id": 6,
+        "row": 2,
+        "column": 2,
+        "clockwise": 2
+      },
+      {
+        "id": 8,
+        "row": 2,
+        "column": 4,
+        "clockwise": 1
+      },
+      {
+        "id": 13,
+        "row": 3,
+        "column": 4,
+        "clockwise": 3
+      },
+      {
+        "id": 15,
+        "row": 4,
+        "column": 1,
+        "clockwise": 2
+      },
+      {
+        "id": 19,
+        "row": 4,
+        "column": 5,
+        "clockwise": 1
+      }
+    ],
+    "routes": {
+      "idle": {
+        "core": {
+          "steps": 10,
+          "energyRemaining": 6,
+          "path": [
+            "3,1",
+            "2,1",
+            "2,2",
+            "2,3",
+            "2,4",
+            "3,4",
+            "4,4",
+            "4,3",
+            "4,2",
+            "4,1",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        "bonus": {
+          "steps": 14,
+          "energyRemaining": 6,
+          "path": [
+            "3,1",
+            "2,1",
+            "2,2",
+            "2,3",
+            "2,4",
+            "3,4",
+            "3,5",
+            "4,5",
+            "5,5",
+            "5,4",
+            "4,4",
+            "4,3",
+            "4,2",
+            "4,1",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "spinning": {
+        "core": {
+          "steps": 10,
+          "energyRemaining": 6,
+          "path": [
+            "3,1",
+            "2,1",
+            "2,2",
+            "2,3",
+            "2,4",
+            "3,4",
+            "4,4",
+            "4,3",
+            "4,2",
+            "4,1",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        "bonus": {
+          "steps": 14,
+          "energyRemaining": 5,
+          "path": [
+            "3,1",
+            "2,1",
+            "2,2",
+            "2,3",
+            "2,4",
+            "3,4",
+            "3,5",
+            "4,5",
+            "3,5",
+            "3,4",
+            "4,4",
+            "4,3",
+            "4,2",
+            "4,1",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    }
+  },
+  {
+    "level": 8,
+    "title": "The sleepy side path",
+    "size": 5,
+    "par": 10,
+    "maxMoves": 15,
+    "energy": 19,
+    "rotations": [
+      {
+        "id": 10,
+        "row": 3,
+        "column": 1,
+        "clockwise": 2
+      },
+      {
+        "id": 11,
+        "row": 3,
+        "column": 2,
+        "clockwise": 1
+      },
+      {
+        "id": 6,
+        "row": 2,
+        "column": 2,
+        "clockwise": 1
+      },
+      {
+        "id": 8,
+        "row": 2,
+        "column": 4,
+        "clockwise": 3
+      },
+      {
+        "id": 18,
+        "row": 4,
+        "column": 4,
+        "clockwise": 2
+      },
+      {
+        "id": 2,
+        "row": 1,
+        "column": 3,
+        "clockwise": 1
+      }
+    ],
+    "routes": {
+      "idle": {
+        "core": {
+          "steps": 14,
+          "energyRemaining": 5,
+          "path": [
+            "4,1",
+            "3,1",
+            "3,2",
+            "2,2",
+            "2,3",
+            "2,4",
+            "3,4",
+            "4,4",
+            "4,5",
+            "3,5",
+            "4,5",
+            "4,4",
+            "4,3",
+            "4,2",
+            "4,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        "bonus": {
+          "steps": 16,
+          "energyRemaining": 7,
+          "path": [
+            "4,1",
+            "3,1",
+            "3,2",
+            "2,2",
+            "1,2",
+            "1,3",
+            "1,4",
+            "2,4",
+            "3,4",
+            "4,4",
+            "4,5",
+            "3,5",
+            "4,5",
+            "4,4",
+            "4,3",
+            "4,2",
+            "4,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "spinning": {
+        "core": {
+          "steps": 14,
+          "energyRemaining": 5,
+          "path": [
+            "4,1",
+            "3,1",
+            "3,2",
+            "2,2",
+            "2,3",
+            "2,4",
+            "3,4",
+            "4,4",
+            "4,5",
+            "3,5",
+            "4,5",
+            "4,4",
+            "4,3",
+            "4,2",
+            "4,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        "bonus": {
+          "steps": 16,
+          "energyRemaining": 6,
+          "path": [
+            "4,1",
+            "3,1",
+            "3,2",
+            "2,2",
+            "1,2",
+            "1,3",
+            "1,4",
+            "2,4",
+            "3,4",
+            "4,4",
+            "4,5",
+            "3,5",
+            "4,5",
+            "4,4",
+            "4,3",
+            "4,2",
+            "4,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    }
+  },
+  {
+    "level": 9,
+    "title": "Switchback supper",
+    "size": 5,
+    "par": 12,
+    "maxMoves": 17,
+    "energy": 23,
+    "rotations": [
+      {
+        "id": 0,
+        "row": 1,
+        "column": 1,
+        "clockwise": 1
+      },
+      {
+        "id": 1,
+        "row": 1,
+        "column": 2,
+        "clockwise": 2
+      },
+      {
+        "id": 4,
+        "row": 1,
+        "column": 5,
+        "clockwise": 1
+      },
+      {
+        "id": 9,
+        "row": 2,
+        "column": 5,
+        "clockwise": 2
+      },
+      {
+        "id": 12,
+        "row": 3,
+        "column": 3,
+        "clockwise": 3
+      },
+      {
+        "id": 17,
+        "row": 4,
+        "column": 3,
+        "clockwise": 1
+      },
+      {
+        "id": 24,
+        "row": 5,
+        "column": 5,
+        "clockwise": 2
+      }
+    ],
+    "routes": {
+      "idle": {
+        "core": {
+          "steps": 16,
+          "energyRemaining": 11,
+          "path": [
+            "3,1",
+            "2,1",
+            "1,1",
+            "1,2",
+            "1,3",
+            "1,4",
+            "1,5",
+            "2,5",
+            "3,5",
+            "4,5",
+            "5,5",
+            "5,4",
+            "5,3",
+            "4,3",
+            "3,3",
+            "3,2",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        "bonus": {
+          "steps": 16,
+          "energyRemaining": 11,
+          "path": [
+            "3,1",
+            "2,1",
+            "1,1",
+            "1,2",
+            "1,3",
+            "1,4",
+            "1,5",
+            "2,5",
+            "3,5",
+            "4,5",
+            "5,5",
+            "5,4",
+            "5,3",
+            "4,3",
+            "3,3",
+            "3,2",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "spinning": {
+        "core": {
+          "steps": 16,
+          "energyRemaining": 10,
+          "path": [
+            "3,1",
+            "2,1",
+            "1,1",
+            "1,2",
+            "1,3",
+            "1,4",
+            "1,5",
+            "2,5",
+            "3,5",
+            "4,5",
+            "5,5",
+            "5,4",
+            "5,3",
+            "4,3",
+            "3,3",
+            "3,2",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        "bonus": {
+          "steps": 16,
+          "energyRemaining": 10,
+          "path": [
+            "3,1",
+            "2,1",
+            "1,1",
+            "1,2",
+            "1,3",
+            "1,4",
+            "1,5",
+            "2,5",
+            "3,5",
+            "4,5",
+            "5,5",
+            "5,4",
+            "5,3",
+            "4,3",
+            "3,3",
+            "3,2",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    }
+  },
+  {
+    "level": 10,
+    "title": "Roots and roundabouts",
+    "size": 5,
+    "par": 11,
+    "maxMoves": 16,
+    "energy": 22,
+    "rotations": [
+      {
+        "id": 11,
+        "row": 3,
+        "column": 2,
+        "clockwise": 1
+      },
+      {
+        "id": 6,
+        "row": 2,
+        "column": 2,
+        "clockwise": 2
+      },
+      {
+        "id": 1,
+        "row": 1,
+        "column": 2,
+        "clockwise": 1
+      },
+      {
+        "id": 8,
+        "row": 2,
+        "column": 4,
+        "clockwise": 3
+      },
+      {
+        "id": 17,
+        "row": 4,
+        "column": 3,
+        "clockwise": 1
+      },
+      {
+        "id": 19,
+        "row": 4,
+        "column": 5,
+        "clockwise": 2
+      },
+      {
+        "id": 23,
+        "row": 5,
+        "column": 4,
+        "clockwise": 1
+      }
+    ],
+    "routes": {
+      "idle": {
+        "core": {
+          "steps": 12,
+          "energyRemaining": 10,
+          "path": [
+            "3,1",
+            "3,2",
+            "2,2",
+            "1,2",
+            "1,3",
+            "1,2",
+            "2,2",
+            "2,3",
+            "2,2",
+            "3,2",
+            "4,2",
+            "3,2",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "bonus": {
+          "steps": 18,
+          "energyRemaining": 8,
+          "path": [
+            "3,1",
+            "3,2",
+            "2,2",
+            "2,3",
+            "2,2",
+            "1,2",
+            "1,3",
+            "1,4",
+            "2,4",
+            "3,4",
+            "3,5",
+            "4,5",
+            "5,5",
+            "5,4",
+            "4,4",
+            "4,3",
+            "4,2",
+            "3,2",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "spinning": {
+        "core": {
+          "steps": 12,
+          "energyRemaining": 10,
+          "path": [
+            "3,1",
+            "3,2",
+            "2,2",
+            "1,2",
+            "1,3",
+            "1,2",
+            "2,2",
+            "2,3",
+            "2,2",
+            "3,2",
+            "4,2",
+            "3,2",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "bonus": {
+          "steps": 18,
+          "energyRemaining": 7,
+          "path": [
+            "3,1",
+            "3,2",
+            "2,2",
+            "2,3",
+            "2,2",
+            "1,2",
+            "1,3",
+            "1,4",
+            "2,4",
+            "3,4",
+            "3,5",
+            "4,5",
+            "3,5",
+            "3,4",
+            "4,4",
+            "4,3",
+            "4,2",
+            "3,2",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    }
+  },
+  {
+    "level": 11,
+    "title": "The amber vault",
+    "size": 5,
+    "par": 14,
+    "maxMoves": 19,
+    "energy": 22,
+    "rotations": [
+      {
+        "id": 5,
+        "row": 2,
+        "column": 1,
+        "clockwise": 2
+      },
+      {
+        "id": 6,
+        "row": 2,
+        "column": 2,
+        "clockwise": 1
+      },
+      {
+        "id": 7,
+        "row": 2,
+        "column": 3,
+        "clockwise": 3
+      },
+      {
+        "id": 2,
+        "row": 1,
+        "column": 3,
+        "clockwise": 1
+      },
+      {
+        "id": 9,
+        "row": 2,
+        "column": 5,
+        "clockwise": 2
+      },
+      {
+        "id": 13,
+        "row": 3,
+        "column": 4,
+        "clockwise": 1
+      },
+      {
+        "id": 17,
+        "row": 4,
+        "column": 3,
+        "clockwise": 3
+      },
+      {
+        "id": 24,
+        "row": 5,
+        "column": 5,
+        "clockwise": 1
+      }
+    ],
+    "routes": {
+      "idle": {
+        "core": {
+          "steps": 14,
+          "energyRemaining": 8,
+          "path": [
+            "4,1",
+            "3,1",
+            "2,1",
+            "2,2",
+            "2,3",
+            "1,3",
+            "1,4",
+            "1,5",
+            "2,5",
+            "3,5",
+            "3,4",
+            "3,3",
+            "4,3",
+            "4,2",
+            "4,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        "bonus": {
+          "steps": 18,
+          "energyRemaining": 8,
+          "path": [
+            "4,1",
+            "3,1",
+            "2,1",
+            "2,2",
+            "2,3",
+            "1,3",
+            "1,4",
+            "1,5",
+            "2,5",
+            "3,5",
+            "4,5",
+            "5,5",
+            "5,4",
+            "5,3",
+            "4,3",
+            "3,3",
+            "4,3",
+            "4,2",
+            "4,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "spinning": {
+        "core": {
+          "steps": 14,
+          "energyRemaining": 8,
+          "path": [
+            "4,1",
+            "3,1",
+            "2,1",
+            "2,2",
+            "2,3",
+            "1,3",
+            "1,4",
+            "1,5",
+            "2,5",
+            "3,5",
+            "3,4",
+            "3,3",
+            "4,3",
+            "4,2",
+            "4,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        "bonus": {
+          "steps": 18,
+          "energyRemaining": 7,
+          "path": [
+            "4,1",
+            "3,1",
+            "2,1",
+            "2,2",
+            "2,3",
+            "1,3",
+            "1,4",
+            "1,5",
+            "2,5",
+            "3,5",
+            "4,5",
+            "5,5",
+            "4,5",
+            "3,5",
+            "3,4",
+            "3,3",
+            "4,3",
+            "4,2",
+            "4,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    }
+  },
+  {
+    "level": 12,
+    "title": "The burrow circuit",
+    "size": 5,
+    "par": 16,
+    "maxMoves": 21,
+    "energy": 25,
+    "rotations": [
+      {
+        "id": 0,
+        "row": 1,
+        "column": 1,
+        "clockwise": 1
+      },
+      {
+        "id": 1,
+        "row": 1,
+        "column": 2,
+        "clockwise": 2
+      },
+      {
+        "id": 2,
+        "row": 1,
+        "column": 3,
+        "clockwise": 3
+      },
+      {
+        "id": 4,
+        "row": 1,
+        "column": 5,
+        "clockwise": 1
+      },
+      {
+        "id": 9,
+        "row": 2,
+        "column": 5,
+        "clockwise": 2
+      },
+      {
+        "id": 24,
+        "row": 5,
+        "column": 5,
+        "clockwise": 1
+      },
+      {
+        "id": 22,
+        "row": 5,
+        "column": 3,
+        "clockwise": 3
+      },
+      {
+        "id": 15,
+        "row": 4,
+        "column": 1,
+        "clockwise": 2
+      },
+      {
+        "id": 12,
+        "row": 3,
+        "column": 3,
+        "clockwise": 1
+      }
+    ],
+    "routes": {
+      "idle": {
+        "core": {
+          "steps": 16,
+          "energyRemaining": 9,
+          "path": [
+            "3,1",
+            "2,1",
+            "1,1",
+            "1,2",
+            "1,3",
+            "1,4",
+            "1,5",
+            "2,5",
+            "3,5",
+            "4,5",
+            "5,5",
+            "5,4",
+            "5,3",
+            "5,2",
+            "5,1",
+            "4,1",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        "bonus": {
+          "steps": 20,
+          "energyRemaining": 9,
+          "path": [
+            "3,1",
+            "2,1",
+            "1,1",
+            "1,2",
+            "1,3",
+            "1,4",
+            "1,5",
+            "2,5",
+            "3,5",
+            "4,5",
+            "5,5",
+            "4,5",
+            "3,5",
+            "3,4",
+            "3,3",
+            "3,2",
+            "4,2",
+            "5,2",
+            "5,1",
+            "4,1",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      "spinning": {
+        "core": {
+          "steps": 16,
+          "energyRemaining": 9,
+          "path": [
+            "3,1",
+            "2,1",
+            "1,1",
+            "1,2",
+            "1,3",
+            "1,4",
+            "1,5",
+            "2,5",
+            "3,5",
+            "4,5",
+            "5,5",
+            "5,4",
+            "5,3",
+            "5,2",
+            "5,1",
+            "4,1",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        "bonus": {
+          "steps": 20,
+          "energyRemaining": 8,
+          "path": [
+            "3,1",
+            "2,1",
+            "1,1",
+            "1,2",
+            "1,3",
+            "1,4",
+            "1,5",
+            "2,5",
+            "3,5",
+            "4,5",
+            "5,5",
+            "4,5",
+            "3,5",
+            "3,4",
+            "3,3",
+            "3,2",
+            "4,2",
+            "5,2",
+            "5,1",
+            "4,1",
+            "3,1"
+          ],
+          "switchStates": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      }
+    }
+  }
+]

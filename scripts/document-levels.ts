@@ -42,7 +42,7 @@ const output = levels.map((l) => ({
   ),
 }));
 writeFileSync(
-  "artifacts/level-solutions.json",
+  "docs/level-solutions.json",
   JSON.stringify(output, null, 2) + "\n",
 );
 let md =
@@ -62,4 +62,4 @@ for (const l of output) {
 }
 md +=
   "The same solutions are available in the game’s Reference solutions dialog. Machine-readable paths and switch states are in [level-solutions.json](level-solutions.json). These are game simulations, not live telemetry.\n";
-writeFileSync("artifacts/LEVEL-SOLUTIONS.md", md);
+writeFileSync("docs/LEVEL-SOLUTIONS.md", md);

@@ -2,9 +2,9 @@
 
 A complete, original turn-based tunnel puzzle for the Squeekchain community. Rotate an illustrated underground burrow, collect its seed caches, and send Squeek safely home. The game opens directly on the playable tutorial. Twelve authored levels introduce bends, junctions, directed tunnels, switches, gates, and optional detours.
 
-**Publication result:** the publisher returned `503 member_sites_closed: this plane names no member sites`. No public site URL, IPFS CID or ENS name was issued by this attempt. The finished static export and cloneable source repository are included. See [DEPLOYMENT.md](artifacts/DEPLOYMENT.md).
+**Publication result:** the publisher returned `503 member_sites_closed: this plane names no member sites`. No public site URL, IPFS CID or ENS name was issued by this attempt. The finished static export and cloneable source repository are included. The publisher pins and names the committed `dist/` after the job completes; this repository does not run a publishing command.
 
-The production site is **`dist/`**, included with the source and lockfile. It is a static export with relative URLs and no server, wallet, account, payments, transactions, prizes, analytics, or external font requests. The only in-game network request is the public hamster status API. Publication details are recorded in `artifacts/DEPLOYMENT.md` when available.
+The production site is **`dist/`**, included with the source and lockfile. It is a static export with relative URLs and no server, wallet, account, payments, transactions, prizes, analytics, or external font requests. The only in-game network request is the public hamster status API.
 
 ## Install, play locally, and rebuild
 
@@ -35,7 +35,7 @@ npx playwright install-deps
 npm run test:browser
 ```
 
-The browser suite creates and closes its own preview server under `/burrow/`. It writes actual results and screenshots to `artifacts/`. Browser dependencies and caches are development tooling, not runtime assets, and are not submitted.
+The browser suite creates and closes its own preview server under `/burrow/`. It writes actual results to `docs/browser-results.json` and `docs/axe-results.json`, and screenshots to `test/scratch/screenshots/` (a local scratch folder that is not submitted). Browser dependencies and caches are development tooling, not runtime assets, and are not submitted.
 
 ## How to play
 
@@ -52,7 +52,24 @@ English and Simplified Chinese UI are included, with locally bundled Latin and C
 
 ## Reference solutions
 
-[All 12 reference solutions](artifacts/LEVEL-SOLUTIONS.md) list clockwise rotations and complete round-trip coordinates for **core and bonus objectives in both idle and spinning modes**. [Machine-readable solutions](artifacts/level-solutions.json) include energy left and switch states.
+Coordinates are **row,column** from **1,1 at the top left**. Reset, perform every listed clockwise rotation (any order), then select **Send Squeek**. For the bonus objective, use the same rotations and enable **Include bonus detour** first. Step counts are the shortest valid round trip found by the solver.
+
+| Level | Rotate (row,column) × clockwise turns | Par / move limit | Energy | Core steps idle / spinning | Bonus steps idle / spinning |
+| ---: | --- | :---: | ---: | :---: | :---: |
+| 1. A seed of an idea | (3,2) × 1 | 1 / 5 | 8 | 4 / 4 | 10 / 10 |
+| 2. Around the root | (3,1) × 1; (2,2) × 2; (3,3) × 1 | 4 / 8 | 12 | 8 / 8 | 12 / 12 |
+| 3. The fork in the burrow | (3,2) × 1; (3,3) × 2; (3,4) × 3; (2,3) × 1 | 7 / 12 | 16 | 10 / 10 | 14 / 14 |
+| 4. The long way home | (3,2) × 2; (2,2) × 1; (3,4) × 3; (4,3) × 1; (4,1) × 2 | 9 / 14 | 16 | 10 / 10 | 12 / 12 |
+| 5. One-way whiskers | (2,1) × 1; (2,3) × 2; (3,4) × 1; (4,3) × 3; (4,5) × 1 | 8 / 13 | 16 | 10 / 10 | 14 / 14 |
+| 6. Two little errands | (1,1) × 2; (1,2) × 1; (2,4) × 1; (3,3) × 3; (4,3) × 2; (3,2) × 1 | 10 / 15 | 20 | 14 / 14 | 16 / 16 |
+| 7. A switch in the soil | (2,1) × 1; (2,2) × 2; (2,4) × 1; (3,4) × 3; (4,1) × 2; (4,5) × 1 | 10 / 15 | 16 | 10 / 10 | 14 / 14 |
+| 8. The sleepy side path | (3,1) × 2; (3,2) × 1; (2,2) × 1; (2,4) × 3; (4,4) × 2; (1,3) × 1 | 10 / 15 | 19 | 14 / 14 | 16 / 16 |
+| 9. Switchback supper | (1,1) × 1; (1,2) × 2; (1,5) × 1; (2,5) × 2; (3,3) × 3; (4,3) × 1; (5,5) × 2 | 12 / 17 | 23 | 16 / 16 | 16 / 16 |
+| 10. Roots and roundabouts | (3,2) × 1; (2,2) × 2; (1,2) × 1; (2,4) × 3; (4,3) × 1; (4,5) × 2; (5,4) × 1 | 11 / 16 | 22 | 12 / 12 | 18 / 18 |
+| 11. The amber vault | (2,1) × 2; (2,2) × 1; (2,3) × 3; (1,3) × 1; (2,5) × 2; (3,4) × 1; (4,3) × 3; (5,5) × 1 | 14 / 19 | 22 | 14 / 14 | 18 / 18 |
+| 12. The burrow circuit | (1,1) × 1; (1,2) × 2; (1,3) × 3; (1,5) × 1; (2,5) × 2; (5,5) × 1; (5,3) × 3; (4,1) × 2; (3,3) × 1 | 16 / 21 | 25 | 16 / 16 | 20 / 20 |
+
+[docs/LEVEL-SOLUTIONS.md](docs/LEVEL-SOLUTIONS.md) adds the complete round-trip coordinates and energy left for **core and bonus objectives in both idle and spinning modes**. [docs/level-solutions.json](docs/level-solutions.json) is the machine-readable version with switch states. Regenerate both with:
 
 ```sh
 npx tsx scripts/document-levels.ts
@@ -68,7 +85,7 @@ Source: [Squeekchain status API](https://api.squeekchain.com/v1/status). Officia
 
 A request begins at startup. After success, another request is scheduled about **20 seconds** later. Each has a **6-second abort timeout**. Failure retries after 20, 40, 80, then at most 120 seconds; success restores the 20-second interval. Retry, browser reconnection, and returning to the tab can refresh sooner. Requests do not overlap. Readings older than 60 seconds according to this browser's last successful receipt cannot be snapshotted as live. The displayed **Checked** time is the local receipt time, not an upstream observation or freshness guarantee.
 
-A level snapshots its rule when it starts. The initial tutorial starts immediately in **offline practice with nap rules** while the first request is pending. A successful reading offers **Start a new live run**, with a reset confirmation. A transition during play changes the small live indicator and offers a new run, but leaves the current layout, move budget, refill, and objective unchanged. Ordinary Reset and Undo retain that snapshot. New levels use the latest valid reading. Failed API requests explicitly show **Offline practice** and keep every level playable. No player action affects the real hamster.
+A level snapshots its rule when it starts. The initial tutorial starts immediately in **offline practice with nap rules** while the first request is pending. If the first valid reading arrives before the player has rotated anything, the untouched run adopts it silently as its snapshot (no prompt, no reset). After the player has moved, a reading that differs from the run's rule offers **Start a new live run**, with a reset confirmation. A transition during play changes the small live indicator and offers a new run, but leaves the current layout, move budget, refill, and objective unchanged. Ordinary Reset and Undo retain that snapshot. New levels use the latest valid reading. Failed API requests explicitly show **Offline practice** and keep every level playable. No player action affects the real hamster.
 
 ## Local storage and privacy
 
@@ -92,21 +109,21 @@ No hosted Git account or private key is required. This snapshot has no issue tra
 
 ## Recorded validation
 
-The actual recorded results are in [validation.md](artifacts/validation.md), [browser-results.json](artifacts/browser-results.json), [axe-results.json](artifacts/axe-results.json), [design-metrics.json](artifacts/design-metrics.json), and [screenshots](artifacts/screenshots/). These are worker-side observations, not independent certification.
+The actual recorded results are in [docs/validation.md](docs/validation.md), [docs/browser-results.json](docs/browser-results.json) and [docs/axe-results.json](docs/axe-results.json). Screenshots were inspected locally and are not shipped. These are worker-side observations, not independent certification.
 
 | Check                  | Actual result                                                                                                                                                                                                                                           |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `npm run typecheck`    | Passed; no TypeScript diagnostics                                                                                                                                                                                                                       |
 | `npm test`             | **69 passed, 0 failed**, including 48 reference runs (12 levels × 2 modes × 2 objectives), direction/gate/energy invariants, rotate/undo/reset/win, persistence, validation, timeout, backoff and recovery                                              |
 | `npm run build`        | Passed; complete export with relative local assets                                                                                                                                                                                                      |
-| `npm run test:browser` | **9 Chromium scenarios passed, 0 failed**; all 12 bonus solutions completed in both modes through the real controls; touch and keyboard flows, live snapshot, timeout/recovery, storage failures, English/Chinese, reduced motion, and 200% text tested |
+| `npm run test:browser` | **9 Chromium scenarios passed, 0 failed**; all 12 bonus solutions completed in both modes through the real controls; touch and keyboard flows, untouched first run adopting the first live reading without a 'signal changed' prompt, frozen live snapshot after moves, timeout/recovery, storage failures, English/Chinese, reduced motion, and 200% text tested |
 | Rendered widths        | **320, 360, 390, 760, 950, 1440 CSS px**; no horizontal overflow in tested tutorial states                                                                                                                                                              |
 | First screen           | At **390 × 844**, title, playable board and Send Squeek action are visible; action bottom is approximately **764 px**                                                                                                                                   |
 | axe                    | **0 violations** in the tested Chinese level state at 390 and 320 px for WCAG 2 A/AA, 2.1 AA and 2.2 AA rule tags                                                                                                                                       |
 | Pinned taste@1 probe   | **16/16 passed** at 320, 390 and 1440; no missing local assets or page script errors; reduced-motion check passed                                                                                                                                       |
-| WebKit                 | Browser package was downloaded, but the browser could not complete a usable page in the available host setup; **interaction behavior is not verified**                                                                                                  |
+| WebKit                 | Not run: WebKit could not launch on this host (browser executable/OS dependencies unavailable); **interaction behavior is not verified** |
 
-The original browser fetch-binding bug, a seed/gate role collision, missing Chinese heading glyphs, a 4px decorative overflow, 200% text overflow, modal Tab escape, an unlabelled star graphic, and a redundant shadow were repaired and rechecked. [DESIGN.md](DESIGN.md) records the implemented design system and the six-domain review is in the validation document.
+Revision fixes: the untouched first run no longer shows 'Offline practice' and 'The signal changed' when the first status reading arrives; the decorative teal '?' tab on the How to play card was removed; level solutions and validation records now live in the committed `docs/` folder. Earlier repairs: the original browser fetch-binding bug, a seed/gate role collision, missing Chinese heading glyphs, a 4px decorative overflow, 200% text overflow, modal Tab escape, an unlabelled star graphic, and a redundant shadow were repaired and rechecked. [DESIGN.md](DESIGN.md) records the implemented design system and the six-domain review is in the validation document.
 
 ## Known limitations
 
@@ -121,6 +138,6 @@ The original browser fetch-binding bug, a seed/gate role collision, missing Chin
 
 `src/engine.ts`: pure game rules and deterministic route solver. `src/levels.ts`: authored layouts and rotations. `src/main.ts`: accessible game views and input handling. `src/live.ts`: validated polling. `src/storage.ts`: local progression. `src/art.ts`: original SVG illustrations. `src/i18n.ts`: English/Chinese copy. `src/style.css`: final design tokens and responsive styles. `public/`: required local assets and source mirror. `dist/`: ready-to-publish export.
 
-Original game code and art: MIT, [LICENSE](LICENSE). Font licenses are retained in `public/fonts/`. Better Interface design guidance is adapted from [Jakub Krehel's Better Interface](https://github.com/jakubkrehel/skills/tree/267330e1adfc66a718fb65fa6918c1f06d0a689e/skills/better-interface), MIT; documentation guidance from [Paul Bakaus's Impeccable](https://github.com/pbakaus/impeccable/blob/9d715cc4f5564a990ca8345abfdd5df6dc9b41c8/skill/reference/document.md), Apache-2.0. The supplied combined license is preserved in `artifacts/DESIGN-GUIDE-LICENSE.txt`.
+Original game code and art: MIT, [LICENSE](LICENSE). Font licenses are retained in `public/fonts/`. Better Interface design guidance is adapted from [Jakub Krehel's Better Interface](https://github.com/jakubkrehel/skills/tree/267330e1adfc66a718fb65fa6918c1f06d0a689e/skills/better-interface), MIT; documentation guidance from [Paul Bakaus's Impeccable](https://github.com/pbakaus/impeccable/blob/9d715cc4f5564a990ca8345abfdd5df6dc9b41c8/skill/reference/document.md), Apache-2.0. The supplied combined license is preserved in [docs/DESIGN-GUIDE-LICENSE.txt](docs/DESIGN-GUIDE-LICENSE.txt).
 
 `.gitignore` has an explicit path budget: dependency and cache directories at every nesting level, coverage, TypeScript build state, and `test/scratch/` only. It deliberately includes `dist/`, required fonts, source, solutions, and the static source repository. No dependency archives or registries are vendored.

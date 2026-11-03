@@ -7,10 +7,10 @@ const require = createRequire(process.env.SQUEEK_TOOLCHAIN || import.meta.url);
 const { chromium, webkit } = require("playwright");
 const AxeBuilder = require("@axe-core/playwright").default;
 const solutions = JSON.parse(
-  await readFile("artifacts/level-solutions.json", "utf8"),
+  await readFile("docs/level-solutions.json", "utf8"),
 );
 const root = resolve("dist"),
-  out = resolve("artifacts/screenshots");
+  out = resolve("test/scratch/screenshots");
 await mkdir(out, { recursive: true });
 const mime = {
   ".html": "text/html",
@@ -106,6 +106,13 @@ try {
       await page.goto(url);
       await page.locator(".signal-dot.online").waitFor();
       await page.evaluate(() => document.fonts.ready);
+      // An untouched first run adopts the first live reading silently.
+      const firstRule = await page.locator("#run-rule").textContent();
+      assert.match(firstRule, /Nap nook/);
+      assert.doesNotMatch(firstRule, /Offline practice/);
+      assert.equal(await page.locator("#new-run").count(), 0);
+      assert.equal(await page.locator(".changed-note").count(), 0);
+      assert.equal(await page.locator(".notebook-mark").count(), 0);
       const box = await page.locator("#send").boundingBox();
       assert.ok(box.y + box.height <= 844);
       assert.equal(await page.title(), "Squeek Burrow Circuit");
@@ -411,7 +418,7 @@ try {
         });
       }
       await writeFile(
-        "artifacts/axe-results.json",
+        "docs/axe-results.json",
         JSON.stringify(
           { violations: audits.flatMap((a) => a.violations), audits },
           null,
@@ -507,7 +514,9 @@ try {
     );
     await safari.close();
   } catch (e) {
-    limitations.push("WebKit could not launch: " + String(e));
+    limitations.push(
+      "WebKit could not launch on this host (browser executable or OS dependencies unavailable)",
+    );
     console.log("LIMITATION WebKit host dependencies unavailable");
   }
 } finally {
@@ -522,7 +531,7 @@ const summary = {
   limitations,
 };
 await writeFile(
-  "artifacts/browser-results.json",
+  "docs/browser-results.json",
   JSON.stringify(summary, null, 2) + "\n",
 );
 console.log(
